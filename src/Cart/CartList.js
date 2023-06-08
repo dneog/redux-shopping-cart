@@ -1,18 +1,32 @@
 import React from 'react'
-
+import { useDispatch } from 'react-redux'
+import { cartActions } from '../store/CartSlice';
 const CartList = ({item}) => {
+  const dispatch= useDispatch();
+  const {id, total, price, quantity, title}= item
+  const removeItemHandler=(id)=> {
+    dispatch(cartActions.removeItemFromCart(id))
+  }
+  const addItemHandler=()=> {
+    dispatch(cartActions.addItemToCart({
+      id,
+      title,
+      price,
+     
+    }))
+  }
   return (
     <div className='cards'>
         <div className='cards2'>
-        <p>{item.title}</p>
-        <p className='item'>${item.total} (${item.price} / item)</p>
+        <p>{title}</p>
+        <p className='item'>${total} (${price} / item)</p>
         </div>
         <div className='cards3'>
-        <p className='quan'>x {item.quantity}
+        <p className='quan'>x {quantity}
         </p>
         <div className='butns'>
-        <button className='add'>-</button>
-        <button className='del'>+</button>
+        <button className='add' onClick={() => removeItemHandler(id)}>-</button>
+        <button className='del' onClick={addItemHandler}>+</button>
         </div>
         
         </div>
