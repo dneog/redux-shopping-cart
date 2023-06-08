@@ -14,6 +14,51 @@ function App() {
 
  const cart= useSelector((state)=> state.cart)
 const notification= useSelector(state => state.ui.notification)
+
+const fetchData = async () => {
+  dispatch(
+    uiActions.showNotification({
+      status: 'Pending',
+      title: 'Fetching...',
+      message: 'Fetching Data...',
+    })
+  );
+
+  try {
+    const response = await fetch('https://simple-crud-4c559-default-rtdb.firebaseio.com/cart.json');
+    if (!response.ok) {
+      throw new Error('Fetching Data Failed');
+    }
+
+    const data = await response.json();
+    // Process the fetched data as needed
+
+    dispatch(
+      uiActions.showNotification({
+        status: 'success',
+        title: 'Success',
+        message: 'Fetching Data Successfully',
+      })
+    );
+  } catch (error) {
+    dispatch(
+      uiActions.showNotification({
+        status: 'error',
+        title: 'Error',
+        message: 'Fetching Data Failed',
+      })
+    );
+  }
+};
+
+useEffect(() => {
+ 
+    
+    fetchData();
+ 
+}, []);
+  
+
  useEffect(()=> {
   const sendCartData= async ()=> {
     dispatch(uiActions.showNotification({
@@ -65,3 +110,5 @@ const notification= useSelector(state => state.ui.notification)
 }
 
 export default App;
+
+
