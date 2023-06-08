@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+
+body{
+    background: #000000d7;
+}
+.text{
+    text-align: center;
+   padding-top: 15px;
+   padding-bottom: 15px;
+   color: white;
+   font-size: 25px;
+
+
+}
+.card{
+   
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: auto;
+    background: #f4f4f4;
+    padding: 10px;
+
+
+}
+.card2{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+
+}
+.h2{
+    font-size: 22px;
+    font-weight: bold;
+}
+.price{
+    background: #000000cb;
+    color: white;
+    font-size: 18px;
+    padding: 7px 16px;
+    padding-bottom: 4px;
+    border-radius: 15px;
+
+}
+.card3{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+.outline{
+    font-size: 17px;
+    padding: 6px 10px;
+    background: #00000000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.outline:hover{
+    background: #ebebeb;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg{
+    width: 500px;
+    margin: auto;
+    color: white;
+   
+    background: #000000dc;
+    padding: 13px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.shopping{
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 13px;
+    text-align: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cards{
+    background: #646464;
+    padding: 8px;
 }
-
-.App-link {
-  color: #61dafb;
+.cards2{
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
 }
+.item{
+    font-size: 20px;
+}
+.quan{
+    font-style: italic;
+}
+.cards3{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+.butns{
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.add{
+    font-size: 20px;
+    padding: 0px 10px;
+    margin-right: 5px;
+}
+.del{
+    font-size: 20px;
+    padding: 0px 10px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 70px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+    background: #0c0c0c;
+}
+.my{
+    padding: 5px 18px;
+    font-size: 16px;
+    background: #ddcfff;
+    border: 0;
+    cursor: pointer;
+}
+.my span{
+    background: #580085;
+    padding:2px 7px;
+   color: white;
+   border-radius: 2px;
 }
