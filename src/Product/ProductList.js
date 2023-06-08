@@ -13,8 +13,6 @@ const ProductList = ({product}) => {
     }
   return (
     <div>
-    
-
     <div className='card'>
     <div className='card2'>
    <p className='h2'>{title}</p>
